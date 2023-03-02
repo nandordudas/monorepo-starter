@@ -14,7 +14,7 @@
     "pnpm": ">=7.28.0"
   },
   "scripts": {
-    "clean": "turbo clean; rm -rf {.pnpm-store,node_modules}/{*,.*} 2>/dev/null",
+    "clean": "pnpm run --recursive clean; rm -rf {.pnpm-store,node_modules}/{*,.*} 2>/dev/null",
     "lint:fix": "eslint --cache --fix .",
     "lint": "turbo lint",
     "prepare": "pnpm setup:husky",
