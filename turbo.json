@@ -28,6 +28,12 @@
     "test": {
       "dependsOn": [
         "build"
+      ],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "test/**/*.spec.ts",
+        "test/**/*.spec.tsx"
       ]
     }
   }
