@@ -1,6 +1,6 @@
 # TypeScript config
 
-> 📦 @workspace/tsconfig
+> 📦 @workspace/typescript-config
 
 [TSConfig reference]
 
