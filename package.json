@@ -1,0 +1,73 @@
+{
+  "name": "workspace",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@7.28.0",
+  "author": {
+    "email": "nandor.dudas@gmail.com",
+    "name": "Nándor Dudás",
+    "url": "https://github.com/nandordudas"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.14.0",
+    "pnpm": ">=7.28.0"
+  },
+  "scripts": {
+    "clean": "turbo clean; rm -rf {.pnpm-store,node_modules}/{*,.*} 2>/dev/null",
+    "lint:fix": "eslint --cache --fix .",
+    "lint": "turbo lint",
+    "prepare": "pnpm setup:husky",
+    "setup:husky": "husky install packages/commitlint/hooks",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "@workspace/commitlint-config": "workspace:*",
+    "@workspace/eslint-config": "workspace:*",
+    "bumpp": "^9.0.0",
+    "turbo": "^1.8.3"
+  },
+  "commitlint": {
+    "extends": "@workspace",
+    "parserPreset": {
+      "parserOpts": {
+        "issuePrefixes": [
+          "WRKSPC-"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": "@workspace",
+    "rules": {
+      "import/order": [
+        "error",
+        {
+          "alphabetize": {
+            "caseInsensitive": true,
+            "order": "asc"
+          },
+          "newlines-between": "always",
+          "groups": [
+            "external",
+            "builtin",
+            [
+              "sibling",
+              "parent"
+            ],
+            "index",
+            "object"
+          ],
+          "pathGroups": [
+            {
+              "group": "external",
+              "pattern": "~/**",
+              "position": "after"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+name: 🚀 New feature proposal
+description: Propose a new feature
+
+labels:
+  - enhancement
+
+assignees:
+  - nandordudas
+
+body:
+  - type: markdown
+    attributes:
+      value: Write down the new function and fill in the required fields with a detailed explanation.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Clear and concise description
+      description: As a developer ... I want to ... so that
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Any other context or screenshots about the feature request

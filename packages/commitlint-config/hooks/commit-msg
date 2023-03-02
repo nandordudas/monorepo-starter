@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+DIR="$(dirname -- "$0")"
+
+. "$DIR/_/husky.sh"
+
+npx --no -- commitlint \
+  --edit "$1" \
+  --config "$DIR/../src/index.cjs"

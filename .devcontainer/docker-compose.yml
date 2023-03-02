@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      args:
+        USERNAME: node
+        VARIANT: 18
+    env_file: ../.env
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:cached
+      - node-modules:/workspace/node_modules
+      - pnpm-store:/workspace/.pnpm-store
+      # - vscode-extensions:/home/node/.vscode-server/extensions
+
+
+  # redis:
+  #   image: redis:7.0-alpine3.17
+  #   restart: always
+  #   command: redis-server --appendonly yes --requirepass redis
+  #   volumes:
+  #     - redis-data:/data
+
+  # postgres:
+  #   image: postgres:15.2-alpine3.17
+  #   restart: always
+  #   environment:
+  #     POSTGRES_PASSWORD: postgres
+  #   volumes:
+  #     - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  node-modules:
+  pnpm-store:
+  # postgres-data:
+  # redis-data:
+  # vscode-extensions:

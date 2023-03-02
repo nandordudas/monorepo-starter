@@ -1,0 +1,23 @@
+# Directories
+**/cache
+.cache
+.nitro
+.nuxt
+.output
+.pnpm-store
+.turbo
+.vscode
+build
+coverage
+dist
+logs
+node_modules
+tmp
+
+# Files
+.DS_Store
+.env
+.eslintcache
+*.local
+*.log*
+tsconfig.tsbuildinfo

@@ -1,0 +1,3 @@
+# TypeScript config
+
+> @workspace/tsconfig

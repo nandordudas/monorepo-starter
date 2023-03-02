@@ -1,0 +1,41 @@
+name: Cleanup action caches
+
+permissions:
+  actions: write
+
+on:
+  pull_request:
+    types:
+      - closed
+  workflow_dispatch: {}
+
+jobs:
+  cleanup:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 🧹 Clear unnecessary caches
+        uses: actions/github-script@v6
+        with:
+          script: |
+            let shouldCheckMainCache = true
+            const MAIN_REF = 'refs/heads/main'
+            const { payload, repo: { owner, repo } } = context
+            const pullRequestNumber = payload?.pull_request?.number
+            const ref = pullRequestNumber ? `refs/pull/${pullRequestNumber}/merge` : undefined
+            const caches = await github.rest.actions.getActionsCacheList({ owner, ref, repo })
+
+            const promises = caches.data.actions_caches.map(({ id: cache_id, ref }) => {
+              if (shouldCheckMainCache && ref === MAIN_REF)
+                shouldCheckMainCache = false
+
+              if (!shouldCheckMainCache)
+                return
+
+              return github.rest.actions.deleteActionsCacheById({ cache_id, owner, repo })
+            })
+
+            await Promise.all(promises)

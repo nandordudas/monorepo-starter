@@ -1,0 +1,25 @@
+{
+  "name": "@workspace/eslint-config",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ESLint config",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./src/index.cjs"
+    }
+  },
+  "main": "./src/index.cjs",
+  "files": [
+    "./src/index.cjs"
+  ],
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "lint": "eslint --cache --config ./src/index.cjs ."
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.35.3",
+    "@types/eslint": "^8.21.1",
+    "eslint": "^8.35.0"
+  }
+}

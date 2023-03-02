@@ -1,0 +1,45 @@
+name: CI
+
+env:
+  HUSKY: 0
+
+permissions: {}
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  ci:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: corepack enable
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: package.json
+          cache: pnpm
+
+      - name: 📦 Install dependencies
+        run: pnpm install
+
+      - name: 🧪 Run tests
+        run: pnpm run test -- --single-thread
+
+      - name: 📝 Lint code
+        run: pnpm run lint
+
+      - name: 💪 Check types
+        run: pnpm run typecheck

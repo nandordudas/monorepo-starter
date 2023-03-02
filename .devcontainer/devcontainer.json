@@ -1,0 +1,90 @@
+{
+  "name": "Node.js & TypeScript",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/zsh-plugins:0.0.2": {
+      "plugins": "git F-Sy-H",
+      "omzPlugins": "https://github.com/z-shell/F-Sy-H"
+    },
+    "ghcr.io/devcontainers-contrib/features/pnpm:2": {
+      "version": "latest"
+    },
+    "ghcr.io/stuartleeks/dev-container-features/shell-history:0.0.3": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": {
+    "setupFolderPrivileges": "sudo chown node .pnpm-store node_modules",
+    "installDependencies": "pnpm install"
+  },
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      // TODO: extensions are not installing properly
+      // https://github.com/microsoft/vscode-remote-release/issues/8097
+      "extensions": [
+        "antfu.unocss",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker",
+        "mutantdino.resourcemonitor",
+        "sonarsource.sonarlint-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "vue.volar"
+      ],
+      "settings": {
+        // #region Editorconfig like settings
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "files.encoding": "utf8",
+        "files.eol": "\n",
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        // #endregion
+        // #region ESLint
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true,
+          "source.fixAll": false,
+          "source.organizeImports": false
+        },
+        "editor.formatOnSave": false,
+        "editor.formatOnSaveMode": "modificationsIfAvailable",
+        "editor.formatOnType": false,
+        "eslint.codeActionsOnSave.mode": "problems",
+        "eslint.validate": [
+          "html",
+          "javascript",
+          "json",
+          "json5",
+          "jsonc",
+          "markdown",
+          "typescript",
+          "vue",
+          "yaml"
+        ],
+        // #endregion
+        // #region Error lens
+        "errorLens.excludeBySource": [
+          "cSpell",
+          "eslint"
+        ],
+        "errorLens.fontStyleItalic": true,
+        "errorLens.fontWeight": "100",
+        //
+        // #endregion
+        // #region General settings
+        "editor.rulers": [
+          80,
+          120
+        ],
+        "editor.wordWrapColumn": 120,
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "typescript.updateImportsOnFileMove.enabled": "always"
+        // #endregion
+      }
+    }
+  }
+}
