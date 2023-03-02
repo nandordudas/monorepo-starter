@@ -16,9 +16,7 @@
       "cache": false
     },
     "lint": {
-      "outputs": [
-        ".eslintcache"
-      ]
+      "outputs": []
     },
     "typecheck": {
       "dependsOn": [
