@@ -1,6 +1,6 @@
 {
   "name": "@workspace/commitlint-config",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "private": true,
   "description": "Commitlint config",
   "license": "MIT",

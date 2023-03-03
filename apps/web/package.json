@@ -1,7 +1,7 @@
 {
   "name": "@workspace/web",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -29,7 +29,10 @@
   "eslintConfig": {
     "extends": "@workspace",
     "rules": {
-      "indent": ["error", 2]
+      "indent": [
+        "error",
+        2
+      ]
     }
   }
 }
