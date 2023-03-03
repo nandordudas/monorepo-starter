@@ -23,4 +23,4 @@ ARG USERNAME
 USER $USERNAME
 
 RUN \
-  npm install --global @antfu/ni npkill taze typesync
+  npm install --global @antfu/ni bumpp npkill taze typesync

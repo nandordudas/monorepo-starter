@@ -10,7 +10,10 @@ Of course, these are only recommended tools. You have to comply with the Devcont
 
 ### Installation
 
-One click [here] or use command line:
+1. Click to `Use this template` dropdown right above and select `Create a new repository` item.
+2. One click [here].
+
+**Recommended**
 
 ```bash
 cd ~/Code/GitHub/...

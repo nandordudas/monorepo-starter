@@ -2,6 +2,8 @@
   "name": "@workspace/api",
   "type": "module",
   "version": "0.1.0",
+  "private": true,
+  "description": "API application",
   "license": "MIT",
   "exports": {
     ".": {

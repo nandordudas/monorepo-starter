@@ -3,6 +3,7 @@
   "version": "0.1.5",
   "private": true,
   "packageManager": "pnpm@7.28.0",
+  "description": "Monorepo starter",
   "author": {
     "email": "nandor.dudas@gmail.com",
     "name": "Nándor Dudás",
@@ -25,7 +26,6 @@
   "devDependencies": {
     "@workspace/commitlint-config": "workspace:*",
     "@workspace/eslint-config": "workspace:*",
-    "bumpp": "^9.0.0",
     "turbo": "^1.8.3"
   },
   "commitlint": {
