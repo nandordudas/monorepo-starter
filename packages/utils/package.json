@@ -1,44 +1,37 @@
 {
-  "name": "@workspace/api",
+  "name": "@workspace/utils",
   "type": "module",
   "version": "0.1.0",
+  "private": true,
   "license": "MIT",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    },
-    "./logger": {
-      "types": "./dist/logger.d.ts",
-      "require": "./dist/logger.cjs",
-      "import": "./dist/logger.js"
+      "import": "./dist/index.mjs"
     }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "./dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "unbuild",
     "clean": "rm -rf dist node_modules",
     "dev": "tsx watch ./src",
     "lint": "eslint --cache .",
-    "test": "vitest",
+    "stub": "unbuild --stub",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "@antfu/utils": "^0.7.2"
   },
   "devDependencies": {
-    "@types/express": "^4.17.17",
     "@workspace/typescript-config": "workspace:*",
-    "@workspace/utils": "workspace:*",
-    "tsup": "^6.6.3",
     "tsx": "^3.12.3",
     "typescript": "^4.9.5",
-    "vitest": "^0.29.2"
+    "unbuild": "^1.1.2"
   }
 }

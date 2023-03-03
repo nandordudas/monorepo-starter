@@ -1,0 +1,24 @@
+{
+  "extends": "@workspace/typescript-config/vite-react-strictest.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": [
+        "./*"
+      ]
+    },
+    "types": [
+      "vite/client"
+    ]
+  },
+  "include": [
+    "./src",
+    "./package.json"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

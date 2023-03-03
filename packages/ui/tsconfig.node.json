@@ -1,0 +1,13 @@
+{
+  "extends": "@workspace/typescript-config/node18-strictest.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "composite": true,
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "./vite.config.ts",
+    "./package.json"
+  ]
+}

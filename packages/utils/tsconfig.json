@@ -1,0 +1,6 @@
+{
+  "extends": "@workspace/typescript-config/node18-strictest.json",
+  "exclude": [
+    "./dist"
+  ]
+}
