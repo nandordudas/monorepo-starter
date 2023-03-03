@@ -1,5 +1,5 @@
 describe('app', () => {
-  it('should do no too so much', () => {
+  it('should do not do too much', () => {
     expect(1).toBe(1)
   })
 })
