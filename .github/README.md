@@ -17,7 +17,8 @@ Of course, these are only recommended tools. You have to comply with the Devcont
 
 ```bash
 cd ~/Code/GitHub/...
-npx degit https://github.com/nandordudas/monorepo-starter
+npx degit \
+  https://github.com/nandordudas/monorepo-starter
 code -n monorepo-starter
 ```
 
@@ -28,8 +29,12 @@ git init -b main
 git commit -m "chore: initial commit"
 # set the remote origin if it doesn't exist
 # git remote add origin https://github.com/...
-npx bumpp major --files */**/package.json --no-{commit,push,tag}
-npx bumpp premajor --preid alpha --yes
+npx bumpp major \
+  --files */**/package.json \
+  --no-{commit,push,tag}
+npx bumpp premajor \
+  --preid alpha \
+  --yes
 ```
 
 ---
