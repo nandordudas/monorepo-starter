@@ -17,8 +17,7 @@ Of course, these are only recommended tools. You have to comply with the Devcont
 
 ```bash
 cd ~/Code/GitHub/...
-npx degit \
-  https://github.com/nandordudas/monorepo-starter
+npx degit https://github.com/nandordudas/monorepo-starter
 code -n monorepo-starter
 ```
 
@@ -28,7 +27,7 @@ Open folder in Devcontainer, do some setup and enjoy.
 git init -b main
 git commit -m "chore: initial commit"
 # set the remote origin if it doesn't exist
-# git remote add origin https://github.com/...
+# git remote add origin ...
 npx bumpp major \
   --files */**/package.json \
   --no-{commit,push,tag}
