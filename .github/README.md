@@ -28,12 +28,8 @@ git init -b main
 git commit -m "chore: initial commit"
 # set the remote origin if it doesn't exist
 # git remote add origin ...
-npx bumpp major \
-  --files */**/package.json \
-  --no-{commit,push,tag}
-npx bumpp premajor \
-  --preid alpha \
-  --yes
+npx bumpp major --files */**/package.json --no-{commit,push,tag}
+npx bumpp premajor --preid alpha --yes
 ```
 
 ---
