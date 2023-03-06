@@ -2,10 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
-    ":disableDependencyDashboard",
     "schedule:earlyMondays",
     "group:allNonMajor"
   ],
+  "automerge": true,
+  "automergeType": "pr",
+  "timezone": "Europe/Berlin",
   "labels": [
     "c: dependencies"
   ],
