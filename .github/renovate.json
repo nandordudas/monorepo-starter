@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
-    "schedule:earlyMondays",
+    "schedule:daily",
     "group:allNonMajor"
   ],
   "automerge": true,
@@ -45,7 +45,8 @@
     {
       "groupName": "typescript-eslint",
       "matchPackagePrefixes": [
-        "@typescript-eslint/"
+        "@typescript-eslint/",
+        "eslint
       ]
     },
     {
@@ -58,6 +59,12 @@
       "groupName": "typescript",
       "matchPackageNames": [
         "typescript"
+      ]
+    },
+    {
+      "groupName": "definitelyTyped",
+      "matchPackagePrefixes": [
+        "@types/"
       ]
     }
   ],
