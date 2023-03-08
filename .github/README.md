@@ -1,7 +1,3 @@
-[![GitHub tag](https://img.shields.io/github/tag/nandordudas/monorepo-starter?include_prereleases=&sort=semver&color=blue)](https://github.com/nandordudas/monorepo-starter/releases/ "Latest release")
-[![License](https://img.shields.io/badge/License-MIT-blue)](../LICENSE "License")
-[![issues - monorepo-starter](https://img.shields.io/github/issues/nandordudas/monorepo-starter)](https://github.com/nandordudas/monorepo-starter/issues "Issues")
-
 [![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/nandordudas/monorepo-starter/generate "Use this template")
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/nandordudas/monorepo-starter "Open in StackBlitz")
 
@@ -23,13 +19,14 @@ Of course, these are only recommended tools. You have to comply with the Devcont
 ```bash
 cd ~/Code/GitHub/...
 npx degit https://github.com/nandordudas/monorepo-starter
-code -n monorepo-starter
+cd monorepo-starter
+cp .env.example .env
+code . -n # or code . -r
 ```
 
 Open folder in Devcontainer, do some setup and enjoy.
 
 ```bash
-cp .env.example .env
 git init -b main
 git add .
 git commit -m "chore: initial commit"
