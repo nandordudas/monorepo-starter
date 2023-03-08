@@ -46,7 +46,7 @@
       "groupName": "typescript-eslint",
       "matchPackagePrefixes": [
         "@typescript-eslint/",
-        "eslint
+        "eslint"
       ]
     },
     {
