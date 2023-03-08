@@ -1,3 +1,13 @@
+[![GitHub tag](https://img.shields.io/github/tag/nandordudas/monorepo-starter?include_prereleases=&sort=semver&color=blue)](https://github.com/nandordudas/monorepo-starter/releases/ "Latest release")
+[![License](https://img.shields.io/badge/License-MIT-blue)](../LICENSE "License")
+[![issues - monorepo-starter](https://img.shields.io/github/issues/nandordudas/monorepo-starter)](https://github.com/nandordudas/monorepo-starter/issues "Issues")
+
+[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/nandordudas/monorepo-starter/generate "Use this template")
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/nandordudas/monorepo-starter "Open in StackBlitz")
+
+<!-- https://codesandbox.io/p/sandbox/github/nandordudas/monorepo-starter -->
+<!-- https://githubbox.com/nandordudas/monorepo-starter -->
+
 # 🪛 Monorepo starter
 
 > tl;dr - _it's a boilerplate for starting Node.js projects for nerds_
@@ -10,11 +20,6 @@ Of course, these are only recommended tools. You have to comply with the Devcont
 
 ### Installation
 
-1. Click to `Use this template` dropdown right above and select `Create a new repository` item.
-2. One click [here].
-
-**Recommended**
-
 ```bash
 cd ~/Code/GitHub/...
 npx degit https://github.com/nandordudas/monorepo-starter
@@ -24,17 +29,18 @@ code -n monorepo-starter
 Open folder in Devcontainer, do some setup and enjoy.
 
 ```bash
+cp .env.example .env
 git init -b main
+git add .
 git commit -m "chore: initial commit"
-# set the remote origin if it doesn't exist
-# git remote add origin ...
+git remote add origin https://github.com/...
 npx bumpp major --files */**/package.json --no-{commit,push,tag}
-npx bumpp premajor --preid alpha --yes --no-verify
+npx bumpp premajor --preid alpha --no-verify --yes
 ```
 
 ---
 
-## Shortcuts
+## Setup shortcuts
 
 <details>
   <summary>Setting up git</summary>
@@ -93,7 +99,6 @@ npx bumpp premajor --preid alpha --yes --no-verify
 
   ```json
   {
-    // check if it is turned on
     "git.enableCommitSigning": true
   }
   ```
@@ -101,6 +106,8 @@ npx bumpp premajor --preid alpha --yes --no-verify
 
 <details>
   <summary>Setting up VS Code</summary>
+
+  [More about setup]
 
   ```bash
   code --install-extension ms-vscode-remote.remote-containers
@@ -113,3 +120,4 @@ npx bumpp premajor --preid alpha --yes --no-verify
 [.devcontainer folder]: ../.devcontainer
 [devcontainers]: ../.devcontainer/README.md#vs-code-devcontainer
 [here]: https://github.com/nandordudas/monorepo-starter/generate
+[More about setup]: https://gist.github.com/nandordudas/a80971a3cf4a4563a26bc9aa3cfc8c00

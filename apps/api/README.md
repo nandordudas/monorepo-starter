@@ -1,3 +1,3 @@
 # 💩 API application
 
-This is the API - or should be.
+This is the API - or it should be.
