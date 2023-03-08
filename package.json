@@ -1,6 +1,6 @@
 {
   "name": "workspace",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "private": true,
   "packageManager": "pnpm@7.29.1",
   "description": "Monorepo starter",
