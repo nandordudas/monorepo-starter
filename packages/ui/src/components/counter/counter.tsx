@@ -2,7 +2,11 @@ import { useState } from 'react'
 
 import classes from './counter.module.css'
 
-export const Counter = () => {
+interface CounterProps {
+  onClick: (count: number) => void
+}
+
+export const Counter = ({ onClick }: CounterProps) => {
   const [count, setCount] = useState(0)
 
   return (
@@ -10,7 +14,10 @@ export const Counter = () => {
     <div className={classes['appContainer']}>
       <h1>Vite + React</h1>
       <div>
-        <button onClick={() => setCount(count => count + 1)}>
+        <button onClick={() => {
+          setCount(count => count + 1)
+          onClick(count)
+        }}>
           count is {count}
         </button>
       </div>

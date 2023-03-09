@@ -10,6 +10,11 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
+    },
+    "./make-safe": {
+      "types": "./dist/make-safe.d.ts",
+      "require": "./dist/make-safe.cjs",
+      "import": "./dist/make-safe.mjs"
     }
   },
   "main": "./dist/index.cjs",
@@ -30,6 +35,7 @@
     "@antfu/utils": "^0.7.2"
   },
   "devDependencies": {
+    "@total-typescript/ts-reset": "^0.4.2",
     "@workspace/typescript-config": "workspace:*",
     "tsx": "^3.12.3",
     "typescript": "^4.9.5",

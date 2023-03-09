@@ -9,6 +9,7 @@
       ]
     },
     "types": [
+      "@total-typescript/ts-reset",
       "vitest/globals"
     ]
   },

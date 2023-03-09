@@ -15,7 +15,6 @@
     "lint": "eslint --cache ."
   },
   "devDependencies": {
-    "@total-typescript/ts-reset": "^0.4.2",
     "@tsconfig/node18-strictest": "^1.0.0",
     "@tsconfig/node18-strictest-esm": "^1.0.1",
     "@tsconfig/strictest": "^1.0.2",

@@ -15,6 +15,7 @@
     "pnpm": ">=7.13.6"
   },
   "scripts": {
+    "build": "turbo build",
     "clean": "pnpm run --recursive clean; rm -rf {.pnpm-store,node_modules}/{*,.*} 2>/dev/null",
     "lint:fix": "eslint --cache --fix .",
     "lint": "turbo lint",

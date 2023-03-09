@@ -14,6 +14,7 @@ importers:
 
   apps/api:
     specifiers:
+      '@total-typescript/ts-reset': ^0.4.2
       '@types/express': ^4.17.17
       '@workspace/typescript-config': workspace:*
       '@workspace/utils': workspace:*
@@ -25,6 +26,7 @@ importers:
     dependencies:
       express: 4.18.2
     devDependencies:
+      '@total-typescript/ts-reset': 0.4.2
       '@types/express': 4.17.17
       '@workspace/typescript-config': link:../../configs/typescript-config
       '@workspace/utils': link:../../packages/utils
@@ -35,12 +37,14 @@ importers:
 
   apps/web:
     specifiers:
+      '@total-typescript/ts-reset': ^0.4.2
       '@types/react': ^18.0.28
       '@types/react-dom': ^18.0.11
       '@vitejs/plugin-react-swc': ^3.2.0
       '@workspace/eslint-config': workspace:*
       '@workspace/typescript-config': workspace:*
       '@workspace/ui': workspace:*
+      '@workspace/utils': workspace:*
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^4.9.5
@@ -49,12 +53,14 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
+      '@total-typescript/ts-reset': 0.4.2
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
       '@workspace/eslint-config': link:../../configs/eslint-config
       '@workspace/typescript-config': link:../../configs/typescript-config
       '@workspace/ui': link:../../packages/ui
+      '@workspace/utils': link:../../packages/utils
       typescript: 4.9.5
       vite: 4.1.4
 
@@ -82,7 +88,6 @@ importers:
 
   configs/typescript-config:
     specifiers:
-      '@total-typescript/ts-reset': ^0.4.2
       '@tsconfig/node18-strictest': ^1.0.0
       '@tsconfig/node18-strictest-esm': ^1.0.1
       '@tsconfig/strictest': ^1.0.2
@@ -90,7 +95,6 @@ importers:
       '@types/node': ^18.14.6
       vite-plugin-dts: ^2.1.0
     devDependencies:
-      '@total-typescript/ts-reset': 0.4.2
       '@tsconfig/node18-strictest': 1.0.0
       '@tsconfig/node18-strictest-esm': 1.0.1
       '@tsconfig/strictest': 1.0.2
@@ -100,6 +104,7 @@ importers:
 
   packages/ui:
     specifiers:
+      '@total-typescript/ts-reset': ^0.4.2
       '@types/react': ^18.0.28
       '@types/react-dom': ^18.0.11
       '@vitejs/plugin-react-swc': ^3.2.0
@@ -113,6 +118,7 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
+      '@total-typescript/ts-reset': 0.4.2
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
@@ -124,6 +130,7 @@ importers:
   packages/utils:
     specifiers:
       '@antfu/utils': ^0.7.2
+      '@total-typescript/ts-reset': ^0.4.2
       '@workspace/typescript-config': workspace:*
       tsx: ^3.12.3
       typescript: ^4.9.5
@@ -131,6 +138,7 @@ importers:
     dependencies:
       '@antfu/utils': 0.7.2
     devDependencies:
+      '@total-typescript/ts-reset': 0.4.2
       '@workspace/typescript-config': link:../../configs/typescript-config
       tsx: 3.12.3
       typescript: 4.9.5

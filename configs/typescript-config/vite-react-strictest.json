@@ -20,11 +20,7 @@
 
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true
     // #endregion
-
-    "types": [
-      "@total-typescript/ts-reset"
-    ]
   }
 }

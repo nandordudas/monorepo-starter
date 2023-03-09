@@ -37,6 +37,20 @@ npx bumpp major --files */**/package.json --no-{commit,push,tag}
 npx bumpp premajor --preid alpha --no-verify --yes
 ```
 
+### Usage
+
+Run dev on apps
+
+```bash
+pnpm -F "./apps/**" dev
+```
+
+Run build on packages
+
+```bash
+pnpm -F "./packages/**" build
+```
+
 ---
 
 ## Setup shortcuts
