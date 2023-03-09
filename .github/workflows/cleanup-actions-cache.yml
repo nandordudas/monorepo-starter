@@ -7,6 +7,8 @@ on:
   pull_request:
     types:
       - closed
+  schedule:
+    - cron: '0 7 * * 1'
   workflow_dispatch:
     inputs:
       name:
