@@ -1,5 +1,7 @@
 [![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/nandordudas/monorepo-starter/generate "Use this template")
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/nandordudas/monorepo-starter "Open in StackBlitz")
+[![CI](https://github.com/nandordudas/monorepo-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/nandordudas/monorepo-starter/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/nandordudas/monorepo-starter/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/nandordudas/monorepo-starter/actions/workflows/github-code-scanning/codeql)
 
 <!-- https://codesandbox.io/p/sandbox/github/nandordudas/monorepo-starter -->
 <!-- https://githubbox.com/nandordudas/monorepo-starter -->
