@@ -15,7 +15,8 @@
       "types": "./dist/make-safe.d.ts",
       "require": "./dist/make-safe.cjs",
       "import": "./dist/make-safe.mjs"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -25,6 +26,7 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "check-exports": "check-export-map",
     "clean": "rm -rf dist node_modules",
     "dev": "tsx watch ./src",
     "lint": "eslint --cache .",
@@ -37,6 +39,7 @@
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.4.2",
     "@workspace/typescript-config": "workspace:*",
+    "check-export-map": "^1.3.0",
     "tsx": "^3.12.3",
     "typescript": "^4.9.5",
     "unbuild": "^1.1.2"

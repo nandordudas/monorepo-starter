@@ -16,6 +16,7 @@
   },
   "scripts": {
     "build": "turbo build",
+    "check-exports": "pnpm --recursive check-exports",
     "clean": "pnpm run --recursive clean; rm -rf {.pnpm-store,node_modules}/{*,.*} 2>/dev/null",
     "lint:fix": "eslint --cache --fix .",
     "lint": "turbo lint",

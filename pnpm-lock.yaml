@@ -69,21 +69,25 @@ importers:
       '@commitlint/cli': ^17.4.4
       '@commitlint/config-conventional': ^17.4.4
       '@commitlint/types': ^17.4.4
+      check-export-map: ^1.3.0
       husky: ^8.0.3
     devDependencies:
       '@commitlint/cli': 17.4.4
       '@commitlint/config-conventional': 17.4.4
       '@commitlint/types': 17.4.4
+      check-export-map: 1.3.0
       husky: 8.0.3
 
   configs/eslint-config:
     specifiers:
       '@antfu/eslint-config': ^0.36.0
       '@types/eslint': ^8.21.1
+      check-export-map: ^1.3.0
       eslint: ^8.35.0
     devDependencies:
       '@antfu/eslint-config': 0.36.0_ycpbpc6yetojsgtrx3mwntkhsu
       '@types/eslint': 8.21.1
+      check-export-map: 1.3.0
       eslint: 8.35.0
 
   configs/typescript-config:
@@ -110,6 +114,7 @@ importers:
       '@vitejs/plugin-react-swc': ^3.2.0
       '@workspace/eslint-config': workspace:*
       '@workspace/typescript-config': workspace:*
+      check-export-map: ^1.3.0
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^4.9.5
@@ -124,6 +129,7 @@ importers:
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
       '@workspace/eslint-config': link:../../configs/eslint-config
       '@workspace/typescript-config': link:../../configs/typescript-config
+      check-export-map: 1.3.0
       typescript: 4.9.5
       vite: 4.1.4
 
@@ -132,6 +138,7 @@ importers:
       '@antfu/utils': ^0.7.2
       '@total-typescript/ts-reset': ^0.4.2
       '@workspace/typescript-config': workspace:*
+      check-export-map: ^1.3.0
       tsx: ^3.12.3
       typescript: ^4.9.5
       unbuild: ^1.1.2
@@ -140,6 +147,7 @@ importers:
     devDependencies:
       '@total-typescript/ts-reset': 0.4.2
       '@workspace/typescript-config': link:../../configs/typescript-config
+      check-export-map: 1.3.0
       tsx: 3.12.3
       typescript: 4.9.5
       unbuild: 1.1.2
@@ -2155,6 +2163,14 @@ packages:
 
   /check-error/1.0.2:
     resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==}
+    dev: true
+
+  /check-export-map/1.3.0:
+    resolution: {integrity: sha512-5UCK+1T+hi08B5RZ4mjMk4ddlI0WMVjd04PPDnPO0/CMQDi+3p7gxYdBmLmM67JRtp1+GJxZbStnooyB6xakiQ==}
+    hasBin: true
+    dependencies:
+      kolorist: 1.7.0
+      mri: 1.2.0
     dev: true
 
   /chokidar/3.5.3:

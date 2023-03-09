@@ -1,25 +1,26 @@
 {
   "name": "@workspace/ui",
-  "type": "module",
   "version": "0.1.5",
   "private": true,
   "description": "UI package",
   "license": "MIT",
   "exports": {
     ".": {
-      "import": "./dist/ui.js"
+      "import": "./dist/ui.mjs"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/style.css": "./dist/style.css",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/ui.js",
+  "main": "./dist/ui.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "./dist"
   ],
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "check-exports": "check-export-map",
     "clean": "rm -rf dist node_modules",
+    "dev": "vite",
     "lint": "eslint --cache .",
     "preview": "vite preview",
     "typecheck": "tsc"
@@ -35,6 +36,7 @@
     "@vitejs/plugin-react-swc": "^3.2.0",
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
+    "check-export-map": "^1.3.0",
     "typescript": "^4.9.5",
     "vite": "^4.1.4"
   },

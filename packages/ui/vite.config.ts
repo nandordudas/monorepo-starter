@@ -22,7 +22,9 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: [...Object.keys(dependencies)],
+      external: [
+        ...Object.keys(dependencies),
+      ],
     },
   },
 })
