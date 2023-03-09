@@ -7,7 +7,11 @@ on:
   pull_request:
     types:
       - closed
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Which branch to use?
+        default: main
 
 jobs:
   cleanup:
@@ -18,24 +22,50 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: 🧹 Clear unnecessary caches
-        uses: actions/github-script@v6
-        with:
-          script: |
-            let shouldCheckMainCache = true
-            const MAIN_REF = 'refs/heads/main'
-            const { payload, repo: { owner, repo } } = context
-            const pullRequestNumber = payload?.pull_request?.number
-            const ref = pullRequestNumber ? `refs/pull/${pullRequestNumber}/merge` : undefined
-            const caches = await github.rest.actions.getActionsCacheList({ owner, ref, repo })
+        run: |
+          gh extension install actions/gh-actions-cache
 
-            const promises = caches.data.actions_caches.map(({ id: cache_id, ref }) => {
-              if (shouldCheckMainCache && ref === MAIN_REF)
-                shouldCheckMainCache = false
+          # Setting this to not fail the workflow while deleting cache keys.
+          set +e
 
-              if (!shouldCheckMainCache)
-                return
+          function get_branch() {
+            local branch
 
-              return github.rest.actions.deleteActionsCacheById({ cache_id, owner, repo })
-            })
+            branch="${{ github.event.inputs.name }}"
 
-            await Promise.all(promises)
+            if [ "$branch" == "main" ]; then
+              echo "main"
+            else
+              echo "refs/pull/${{ github.event.pull_request.number }}/merge"
+            fi
+          }
+
+          function delete_caches() {
+            local branch
+            local cache_keys_for_pr
+            local repo="${{ github.repository }}"
+
+            branch=$(get_branch)
+
+            if [ "$branch" == "main" ]; then
+              echo "Fetching list of cache key on main except the last used"
+
+              cache_keys_for_pr=$(gh actions-cache list -R "$repo" -B "$branch" | cut -f 1 | tail -n +2)
+            else
+              echo "Fetching list of cache key on refs/pull/..."
+
+              cache_keys_for_pr=$(gh actions-cache list -R "$repo" -B "$branch" | cut -f 1)
+            fi
+
+            echo "Deleting caches..."
+
+            for cache_key in $cache_keys_for_pr; do
+              gh actions-cache delete "$cache_key" --repo "$repo" --branch "$branch" --confirm
+            done
+
+            echo "Done"
+          }
+
+          delete_caches
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
