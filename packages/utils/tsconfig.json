@@ -1,9 +1,7 @@
 {
   "extends": "@workspace/typescript-config/node18-strictest.json",
   "compilerOptions": {
-    "types": [
-      "@total-typescript/ts-reset"
-    ]
+    "resolveJsonModule": true
   },
   "exclude": [
     "./dist"

@@ -1,3 +1,9 @@
 {
-  "extends": "@tsconfig/node18-strictest-esm/tsconfig.json"
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/node18-strictest-esm/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "@total-typescript/ts-reset"
+    ]
+  }
 }

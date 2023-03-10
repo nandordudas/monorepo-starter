@@ -19,6 +19,14 @@
     "typecheck": {
       "outputs": []
     },
+    "check-exports": {
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
     "test": {
       "dependsOn": [
         "build"

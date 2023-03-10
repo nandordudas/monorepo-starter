@@ -10,21 +10,19 @@ import { dependencies } from './package.json'
 const root = fileURLToPath(new URL('./src', import.meta.url))
 
 export default defineConfig({
-  plugins: [
-    react(),
-    dts({
-      include: ['./src/components/'],
-    }),
-  ],
   build: {
     lib: {
       entry: resolve(root, './components/index.ts'),
       formats: ['es'],
     },
     rollupOptions: {
-      external: [
-        ...Object.keys(dependencies),
-      ],
+      external: Object.keys(dependencies),
     },
   },
+  plugins: [
+    react(),
+    dts({
+      include: ['./src/components/'],
+    }),
+  ],
 })
