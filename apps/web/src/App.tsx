@@ -1,4 +1,4 @@
-import { Counter } from '@workspace/ui'
+import { Counter } from '@workspace/ui-react'
 import { makeSafe } from '@workspace/utils/make-safe'
 import { useEffect, useState } from 'react'
 

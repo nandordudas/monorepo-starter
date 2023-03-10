@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: [
-        '@workspace/ui',
+        '@workspace/ui-react',
         '@workspace/utils/make-safe',
       ],
     },

@@ -1,7 +1,7 @@
 {
   "name": "@workspace/web",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Web application",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.2.0",
-    "@workspace/ui": "workspace:*",
+    "@workspace/ui-react": "workspace:*",
     "@workspace/utils": "workspace:*"
   },
   "eslintConfig": {
