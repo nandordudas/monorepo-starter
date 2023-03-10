@@ -11,15 +11,13 @@
     "./vite-react-strictest.json"
   ],
   "scripts": {
-    "clean": "rm -rf node_modules",
+    "clean": "rimraf node_modules",
     "lint": "eslint --cache ."
   },
   "devDependencies": {
     "@tsconfig/node18-strictest": "^1.0.0",
     "@tsconfig/node18-strictest-esm": "^1.0.1",
     "@tsconfig/strictest": "^1.0.2",
-    "@tsconfig/vite-react": "^1.0.1",
-    "@types/node": "^18.15.0",
-    "vite-plugin-dts": "^2.1.0"
+    "@tsconfig/vite-react": "^1.0.1"
   }
 }

@@ -3,14 +3,14 @@ import { defineConfig } from 'tsup'
 import { dependencies } from './package.json'
 
 export default defineConfig({
+  clean: true,
+  dts: true,
   entry: [
     './src',
   ],
-  clean: true,
-  sourcemap: true,
-  minify: true,
-  format: ['cjs', 'esm'],
-  splitting: false,
-  dts: true,
   external: Object.keys(dependencies),
+  format: ['cjs', 'esm'],
+  minify: true,
+  sourcemap: true,
+  splitting: false,
 })

@@ -4,13 +4,9 @@
     "resolveJsonModule": true,
     "composite": true,
     "module": "ESNext",
-    "allowSyntheticDefaultImports": true,
-    "types": [
-      "@total-typescript/ts-reset"
-    ]
+    "allowSyntheticDefaultImports": true
   },
   "include": [
-    "./vite.config.ts",
-    "./package.json"
+    "./vite.config.ts"
   ]
 }

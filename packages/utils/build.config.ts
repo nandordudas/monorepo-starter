@@ -1,16 +1,20 @@
 import { defineBuildConfig } from 'unbuild'
 
+import { dependencies } from './package.json'
+
 export default defineBuildConfig({
+  clean: true,
+  declaration: true,
   entries: [
     './src/index',
     './src/make-safe',
   ],
-  clean: true,
-  declaration: true,
+  externals: Object.keys(dependencies),
   rollup: {
     emitCJS: true,
     esbuild: {
       minify: true,
     },
+    inlineDependencies: true,
   },
 })

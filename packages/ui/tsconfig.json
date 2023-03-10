@@ -9,14 +9,9 @@
       ]
     },
     "types": [
-      "@total-typescript/ts-reset",
       "vite/client"
     ]
   },
-  "include": [
-    "./src",
-    "./package.json"
-  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

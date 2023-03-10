@@ -4,91 +4,85 @@ importers:
 
   .:
     specifiers:
+      '@commitlint/cli': ^17.4.4
+      '@total-typescript/ts-reset': ^0.4.2
       '@workspace/commitlint-config': workspace:*
       '@workspace/eslint-config': workspace:*
+      '@workspace/typescript-config': workspace:*
+      check-export-map: ^1.3.0
+      eslint: ^8.35.0
+      husky: ^8.0.3
+      rimraf: ^4.4.0
+      tsup: ^6.6.3
+      tsx: ^3.12.3
       turbo: ^1.8.3
+      typescript: ^4.9.5
+      unbuild: ^1.1.2
+      vite: ^4.1.4
+      vite-plugin-dts: ^2.1.0
+      vitest: ^0.29.2
     devDependencies:
+      '@commitlint/cli': 17.4.4
+      '@total-typescript/ts-reset': 0.4.2
       '@workspace/commitlint-config': link:configs/commitlint-config
       '@workspace/eslint-config': link:configs/eslint-config
+      '@workspace/typescript-config': link:configs/typescript-config
+      check-export-map: 1.3.0
+      eslint: 8.35.0
+      husky: 8.0.3
+      rimraf: 4.4.0
+      tsup: 6.6.3_6qtx7vkbdhwvdm4crzlegk4mvi
+      tsx: 3.12.3
       turbo: 1.8.3
+      typescript: 4.9.5
+      unbuild: 1.1.2
+      vite: 4.1.4_@types+node@18.14.6
+      vite-plugin-dts: 2.1.0_h37bxcmstsgcmwrqgewcpi4xyu
+      vitest: 0.29.2
 
   apps/api:
     specifiers:
-      '@total-typescript/ts-reset': ^0.4.2
       '@types/express': ^4.17.17
-      '@workspace/typescript-config': workspace:*
-      '@workspace/utils': workspace:*
       express: ^4.18.2
-      tsup: ^6.6.3
-      tsx: ^3.12.3
-      typescript: ^4.9.5
-      vitest: ^0.29.2
     dependencies:
       express: 4.18.2
     devDependencies:
-      '@total-typescript/ts-reset': 0.4.2
       '@types/express': 4.17.17
-      '@workspace/typescript-config': link:../../configs/typescript-config
-      '@workspace/utils': link:../../packages/utils
-      tsup: 6.6.3_typescript@4.9.5
-      tsx: 3.12.3
-      typescript: 4.9.5
-      vitest: 0.29.2
 
   apps/web:
     specifiers:
-      '@total-typescript/ts-reset': ^0.4.2
       '@types/react': ^18.0.28
       '@types/react-dom': ^18.0.11
       '@vitejs/plugin-react-swc': ^3.2.0
-      '@workspace/eslint-config': workspace:*
-      '@workspace/typescript-config': workspace:*
       '@workspace/ui': workspace:*
       '@workspace/utils': workspace:*
       react: ^18.2.0
       react-dom: ^18.2.0
-      typescript: ^4.9.5
-      vite: ^4.1.4
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
-      '@total-typescript/ts-reset': 0.4.2
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
-      '@workspace/eslint-config': link:../../configs/eslint-config
-      '@workspace/typescript-config': link:../../configs/typescript-config
       '@workspace/ui': link:../../packages/ui
       '@workspace/utils': link:../../packages/utils
-      typescript: 4.9.5
-      vite: 4.1.4
 
   configs/commitlint-config:
     specifiers:
-      '@commitlint/cli': ^17.4.4
       '@commitlint/config-conventional': ^17.4.4
       '@commitlint/types': ^17.4.4
-      check-export-map: ^1.3.0
-      husky: ^8.0.3
     devDependencies:
-      '@commitlint/cli': 17.4.4
       '@commitlint/config-conventional': 17.4.4
       '@commitlint/types': 17.4.4
-      check-export-map: 1.3.0
-      husky: 8.0.3
 
   configs/eslint-config:
     specifiers:
       '@antfu/eslint-config': ^0.36.0
       '@types/eslint': ^8.21.1
-      check-export-map: ^1.3.0
-      eslint: ^8.35.0
     devDependencies:
       '@antfu/eslint-config': 0.36.0_ycpbpc6yetojsgtrx3mwntkhsu
       '@types/eslint': 8.21.1
-      check-export-map: 1.3.0
-      eslint: 8.35.0
 
   configs/typescript-config:
     specifiers:
@@ -108,49 +102,24 @@ importers:
 
   packages/ui:
     specifiers:
-      '@total-typescript/ts-reset': ^0.4.2
       '@types/react': ^18.0.28
       '@types/react-dom': ^18.0.11
       '@vitejs/plugin-react-swc': ^3.2.0
-      '@workspace/eslint-config': workspace:*
-      '@workspace/typescript-config': workspace:*
-      check-export-map: ^1.3.0
       react: ^18.2.0
       react-dom: ^18.2.0
-      typescript: ^4.9.5
-      vite: ^4.1.4
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
-      '@total-typescript/ts-reset': 0.4.2
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
-      '@workspace/eslint-config': link:../../configs/eslint-config
-      '@workspace/typescript-config': link:../../configs/typescript-config
-      check-export-map: 1.3.0
-      typescript: 4.9.5
-      vite: 4.1.4
 
   packages/utils:
     specifiers:
       '@antfu/utils': ^0.7.2
-      '@total-typescript/ts-reset': ^0.4.2
-      '@workspace/typescript-config': workspace:*
-      check-export-map: ^1.3.0
-      tsx: ^3.12.3
-      typescript: ^4.9.5
-      unbuild: ^1.1.2
     dependencies:
       '@antfu/utils': 0.7.2
-    devDependencies:
-      '@total-typescript/ts-reset': 0.4.2
-      '@workspace/typescript-config': link:../../configs/typescript-config
-      check-export-map: 1.3.0
-      tsx: 3.12.3
-      typescript: 4.9.5
-      unbuild: 1.1.2
 
 packages:
 
@@ -159,7 +128,7 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
-      '@jridgewell/trace-mapping': 0.3.9
+      '@jridgewell/trace-mapping': 0.3.17
     dev: true
 
   /@antfu/eslint-config-basic/0.36.0_y46c5jzhegju5ppnhbs6d4llxi:
@@ -1289,20 +1258,6 @@ packages:
       '@rollup/pluginutils': 5.0.2_rollup@3.18.0
       magic-string: 0.27.0
       rollup: 3.18.0
-    dev: true
-
-  /@rollup/pluginutils/5.0.2:
-    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@types/estree': 1.0.0
-      estree-walker: 2.0.2
-      picomatch: 2.3.1
     dev: true
 
   /@rollup/pluginutils/5.0.2_rollup@3.18.0:
@@ -3431,6 +3386,16 @@ packages:
       once: 1.4.0
     dev: true
 
+  /glob/9.2.1:
+    resolution: {integrity: sha512-Pxxgq3W0HyA3XUvSXcFhRSs+43Jsx0ddxcFrbjxNGkL2Ak5BAUBxLqI5G6ADDeCHLfzzXFhe0b1yYcctGmytMA==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    dependencies:
+      fs.realpath: 1.0.0
+      minimatch: 7.4.2
+      minipass: 4.2.4
+      path-scurry: 1.6.1
+    dev: true
+
   /global-dirs/0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
     engines: {node: '>=4'}
@@ -3852,8 +3817,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /jiti/1.17.1:
-    resolution: {integrity: sha512-NZIITw8uZQFuzQimqjUxIrIcEdxYDFIe/0xYfIlVXTkiBjjyBEvgasj5bb0/cHtPRD/NziPbT312sFrkI5ALpw==}
+  /jiti/1.17.2:
+    resolution: {integrity: sha512-Xf0nU8+8wuiQpLcqdb2HRyHqYwGk2Pd+F7kstyp20ZuqTyCmB9dqpX2NxaxFc1kovraa2bG6c1RL3W7XfapiZg==}
     hasBin: true
     dev: true
 
@@ -4091,6 +4056,11 @@ packages:
       yallist: 4.0.0
     dev: true
 
+  /lru-cache/7.18.3:
+    resolution: {integrity: sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==}
+    engines: {node: '>=12'}
+    dev: true
+
   /magic-string/0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
@@ -4233,6 +4203,13 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
+  /minimatch/7.4.2:
+    resolution: {integrity: sha512-xy4q7wou3vUoC9k1xGTXc+awNdGaGVHtFUaey8tiX4H1QRc04DZ/rmDFwNm2EBsuYEhAZ6SgMmYf3InGY6OauA==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
   /minimist-options/4.1.0:
     resolution: {integrity: sha512-Q4r8ghd80yhO/0j1O3B2BjweX3fiHg9cdOwjJd2J76Q135c+NDxGCqdYKQ1SKBuFfgWbAUzBfvYjPUEeNgqN1A==}
     engines: {node: '>= 6'}
@@ -4244,6 +4221,11 @@ packages:
 
   /minimist/1.2.7:
     resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
+    dev: true
+
+  /minipass/4.2.4:
+    resolution: {integrity: sha512-lwycX3cBMTvcejsHITUgYj6Gy6A7Nh4Q6h9NP4sTHY1ccJlC7yKzDmiShEHsJ16Jf1nKGDEaiHxiltsJEvk0nQ==}
+    engines: {node: '>=8'}
     dev: true
 
   /mkdirp/1.0.4:
@@ -4268,7 +4250,7 @@ packages:
       esbuild: 0.17.10
       fs-extra: 11.1.0
       globby: 13.1.3
-      jiti: 1.17.1
+      jiti: 1.17.2
       mri: 1.2.0
       pathe: 1.1.0
       typescript: 4.9.5
@@ -4527,6 +4509,14 @@ packages:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
     dev: true
 
+  /path-scurry/1.6.1:
+    resolution: {integrity: sha512-OW+5s+7cw6253Q4E+8qQ/u1fVvcJQCJo/VFD8pje+dbJCF1n5ZRMV2AEHbGp+5Q7jxQIYJxkHopnj6nzdGeZLA==}
+    engines: {node: '>=14'}
+    dependencies:
+      lru-cache: 7.18.3
+      minipass: 4.2.4
+    dev: true
+
   /path-to-regexp/0.1.7:
     resolution: {integrity: sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==}
     dev: false
@@ -4571,7 +4561,7 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /postcss-load-config/3.1.4:
+  /postcss-load-config/3.1.4_ts-node@10.9.1:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
     peerDependencies:
@@ -4584,6 +4574,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 2.0.6
+      ts-node: 10.9.1_alpjt73dvgv6kni625hu7f2l4m
       yaml: 1.10.2
     dev: true
 
@@ -4815,6 +4806,14 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
+
+  /rimraf/4.4.0:
+    resolution: {integrity: sha512-X36S+qpCUR0HjXlkDe4NAOhS//aHH0Z+h8Ckf2auGJk3PTnx5rLmrHkwNdbVQuCSUhOyFrlRvFEllZOYE+yZGQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      glob: 9.2.1
     dev: true
 
   /rollup-plugin-dts/5.2.0_fn2onl6nbsljlgjr3jlzr6w7we:
@@ -5298,7 +5297,7 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tsup/6.6.3_typescript@4.9.5:
+  /tsup/6.6.3_6qtx7vkbdhwvdm4crzlegk4mvi:
     resolution: {integrity: sha512-OLx/jFllYlVeZQ7sCHBuRVEQBBa1tFbouoc/gbYakyipjVQdWy/iQOvmExUA/ewap9iQ7tbJf9pW0PgcEFfJcQ==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -5322,7 +5321,7 @@ packages:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 3.1.4
+      postcss-load-config: 3.1.4_ts-node@10.9.1
       resolve-from: 5.0.0
       rollup: 3.18.0
       source-map: 0.8.0-beta.0
@@ -5505,7 +5504,7 @@ packages:
       esbuild: 0.17.10
       globby: 13.1.3
       hookable: 5.4.2
-      jiti: 1.17.1
+      jiti: 1.17.2
       magic-string: 0.29.0
       mkdist: 1.1.1_typescript@4.9.5
       mlly: 1.1.1
@@ -5602,7 +5601,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /vite-node/0.29.2_@types+node@18.14.4:
+  /vite-node/0.29.2_@types+node@18.14.6:
     resolution: {integrity: sha512-5oe1z6wzI3gkvc4yOBbDBbgpiWiApvuN4P55E8OI131JGrSuo4X3SOZrNmZYo4R8Zkze/dhi572blX0zc+6SdA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -5612,7 +5611,7 @@ packages:
       mlly: 1.1.1
       pathe: 1.1.0
       picocolors: 1.0.0
-      vite: 4.1.4_@types+node@18.14.4
+      vite: 4.1.4_@types+node@18.14.6
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5771,7 +5770,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.4
       '@types/chai-subset': 1.3.3
-      '@types/node': 18.14.4
+      '@types/node': 18.14.6
       '@vitest/expect': 0.29.2
       '@vitest/runner': 0.29.2
       '@vitest/spy': 0.29.2
@@ -5790,8 +5789,8 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.3.1
       tinyspy: 1.1.1
-      vite: 4.1.4_@types+node@18.14.4
-      vite-node: 0.29.2_@types+node@18.14.4
+      vite: 4.1.4_@types+node@18.14.6
+      vite-node: 0.29.2_@types+node@18.14.6
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less

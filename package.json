@@ -16,20 +16,34 @@
   },
   "scripts": {
     "build": "turbo build",
-    "check-exports": "pnpm --recursive check-exports",
-    "clean": "pnpm run --recursive clean; rm -rf {.pnpm-store,node_modules}/{*,.*} 2>/dev/null",
+    "check-exports": "turbo check-exports",
+    "clean": "pnpm run --parallel clean; rimraf -g {.pnpm-store,node_modules}/{*,.*} 2>/dev/null",
     "lint:fix": "eslint --cache --fix .",
     "lint": "turbo lint",
     "prepare": "pnpm setup:husky",
-    "release:patch": "npx bumpp patch --no-verify",
+    "release:patch": "npx bumpp patch --no-verify --yes",
     "setup:husky": "husky install ./configs/commitlint-config/hooks",
     "test": "turbo test",
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@total-typescript/ts-reset": "^0.4.2",
     "@workspace/commitlint-config": "workspace:*",
     "@workspace/eslint-config": "workspace:*",
-    "turbo": "^1.8.3"
+    "@workspace/typescript-config": "workspace:*",
+    "check-export-map": "^1.3.0",
+    "eslint": "^8.35.0",
+    "husky": "^8.0.3",
+    "rimraf": "^4.4.0",
+    "tsup": "^6.6.3",
+    "tsx": "^3.12.3",
+    "turbo": "^1.8.3",
+    "typescript": "^4.9.5",
+    "unbuild": "^1.1.2",
+    "vite": "^4.1.4",
+    "vite-plugin-dts": "^2.1.0",
+    "vitest": "^0.29.2"
   },
   "commitlint": {
     "extends": "@workspace",

@@ -26,22 +26,15 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "check-exports": "check-export-map",
-    "clean": "rm -rf dist node_modules",
-    "dev": "tsx watch ./src",
+    "check-exports": "npx check-export-map",
+    "clean": "rimraf dist node_modules",
+    "dev:watch": "tsx watch ./src",
+    "dev": "pnpm stub",
     "lint": "eslint --cache .",
     "stub": "unbuild --stub",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@antfu/utils": "^0.7.2"
-  },
-  "devDependencies": {
-    "@total-typescript/ts-reset": "^0.4.2",
-    "@workspace/typescript-config": "workspace:*",
-    "check-export-map": "^1.3.0",
-    "tsx": "^3.12.3",
-    "typescript": "^4.9.5",
-    "unbuild": "^1.1.2"
   }
 }
