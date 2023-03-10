@@ -1,21 +1,21 @@
 {
   "name": "@workspace/api",
-  "type": "module",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "description": "API application",
   "license": "MIT",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
     },
     "./logger": {
       "types": "./dist/logger.d.ts",
-      "require": "./dist/logger.cjs",
-      "import": "./dist/logger.js"
-    }
+      "require": "./dist/logger.js",
+      "import": "./dist/logger.mjs"
+    },
+    "./package.json": "./package.json"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -25,6 +25,7 @@
   ],
   "scripts": {
     "build": "tsup",
+    "check-exports": "npx check-export-map",
     "clean": "rimraf dist node_modules",
     "dev": "tsx watch ./src",
     "lint": "eslint --cache .",
