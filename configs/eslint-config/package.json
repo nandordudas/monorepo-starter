@@ -21,6 +21,6 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
-    "@types/eslint": "^8.21.1"
+    "@types/eslint": "^8.21.2"
   }
 }
